@@ -65,16 +65,16 @@ public class BaseTest {
 		return driver;
 	}
 
-	public List<HashMap<String, String>> getJsonDataToMap(String filePath) throws IOException {
-		// Read JSON to String
-		String jsonContent = FileUtils.readFileToString(new File(filePath), StandardCharsets.UTF_8);
-		// String to HashMap using Jackson
-		ObjectMapper mapper = new ObjectMapper();
-		List<HashMap<String, String>> data = mapper.readValue(jsonContent,
-				new TypeReference<List<HashMap<String, String>>>() {
-				});
-		return data;
-	}
+//	public List<HashMap<String, String>> getJsonDataToMap(String filePath) throws IOException {
+//		// Read JSON to String
+//		String jsonContent = FileUtils.readFileToString(new File(filePath), StandardCharsets.UTF_8);
+//		// String to HashMap using Jackson
+//		ObjectMapper mapper = new ObjectMapper();
+//		List<HashMap<String, String>> data = mapper.readValue(jsonContent,
+//				new TypeReference<List<HashMap<String, String>>>() {
+//				});
+//		return data;
+//	}
 
 	public String getScreenshot(String testCaseName, WebDriver driver) throws IOException {// ----Goes to extent report
 																							// in Listeners

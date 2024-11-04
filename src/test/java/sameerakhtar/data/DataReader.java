@@ -13,11 +13,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class DataReader {
 
-	public List<HashMap<String, String>> getJsonDataToMap() throws IOException {
+	public static List<HashMap<String, String>> getJsonDataToMap(String filePath) throws IOException {
 		// Read JSON to String
-		String jsonContent = FileUtils.readFileToString(
-				new File(System.getProperty("user.dir") + "//src//test//java//sameerakhtar//data//PurchaseOrder.json"),
-				StandardCharsets.UTF_8);
+		String jsonContent = FileUtils.readFileToString(new File(filePath), StandardCharsets.UTF_8);
 		// String to HashMap Jackson
 		ObjectMapper mapper = new ObjectMapper();
 		List<HashMap<String, String>> data = mapper.readValue(jsonContent,

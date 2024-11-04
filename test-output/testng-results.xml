@@ -1,63 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-10-26T02:56:56 IST" name="Default suite" finished-at="2024-10-26T02:57:04 IST" duration-ms="7857">
+  <suite started-at="2024-11-05T02:07:06 IST" name="Default suite" finished-at="2024-11-05T02:07:48 IST" duration-ms="42548">
     <groups>
-      <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:sameerakhtar.cucumber.TestNGTestRunner@7bd7d6d6]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
-      </group> <!-- cucumber -->
+      <group name="Purchase">
+        <method signature="SubmitOrderTest.submitOrderTest(java.util.HashMap)[pri:0, instance:sameerakhtar.tests.SubmitOrderTest@6c284af]" name="submitOrderTest" class="sameerakhtar.tests.SubmitOrderTest"/>
+        <method signature="SubmitOrderTest.orderHistoryTest(java.util.HashMap)[pri:0, instance:sameerakhtar.tests.SubmitOrderTest@6c284af]" name="orderHistoryTest" class="sameerakhtar.tests.SubmitOrderTest"/>
+      </group> <!-- Purchase -->
     </groups>
-    <test started-at="2024-10-26T02:56:56 IST" name="Default test" finished-at="2024-10-26T02:57:04 IST" duration-ms="7857">
-      <class name="sameerakhtar.cucumber.TestNGTestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:sameerakhtar.cucumber.TestNGTestRunner@7bd7d6d6]" started-at="2024-10-26T02:56:56 IST" name="setUpClass" finished-at="2024-10-26T02:56:57 IST" duration-ms="649" status="PASS">
+    <test started-at="2024-11-05T02:07:06 IST" name="Default test" finished-at="2024-11-05T02:07:48 IST" duration-ms="42548">
+      <class name="sameerakhtar.tests.SubmitOrderTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:sameerakhtar.tests.SubmitOrderTest@6c284af]" started-at="2024-11-05T02:07:06 IST" name="launchApplication" finished-at="2024-11-05T02:07:08 IST" duration-ms="2543" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="submitOrderTest(java.util.HashMap)[pri:0, instance:sameerakhtar.tests.SubmitOrderTest@6c284af]" started-at="2024-11-05T02:07:08 IST" name="submitOrderTest" data-provider="getData" finished-at="2024-11-05T02:07:23 IST" duration-ms="14708" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@73844119]]>
+                <![CDATA[{passwrod=Sameerking01!, actualItem=ZARA COAT 3, email=akhtarsameer743@gmail.com}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:sameerakhtar.cucumber.TestNGTestRunner@7bd7d6d6]" started-at="2024-10-26T02:56:57 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-10-26T02:57:01 IST" duration-ms="4410" status="PASS">
+        </test-method> <!-- submitOrderTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:sameerakhtar.tests.SubmitOrderTest@6c284af]" started-at="2024-11-05T02:07:23 IST" name="tearDown" finished-at="2024-11-05T02:07:23 IST" duration-ms="267" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:sameerakhtar.tests.SubmitOrderTest@6c284af]" started-at="2024-11-05T02:07:23 IST" name="launchApplication" finished-at="2024-11-05T02:07:26 IST" duration-ms="3075" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="submitOrderTest(java.util.HashMap)[pri:0, instance:sameerakhtar.tests.SubmitOrderTest@6c284af]" started-at="2024-11-05T02:07:26 IST" name="submitOrderTest" data-provider="getData" finished-at="2024-11-05T02:07:41 IST" duration-ms="14567" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Positive Test of submitting the order"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Error Validation"]]>
+                <![CDATA[{passwrod=Sameerking01!, actualItem=ADIDAS ORIGINAL, email=sameerakhtar1513@gmail.com}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:sameerakhtar.cucumber.TestNGTestRunner@7bd7d6d6]" started-at="2024-10-26T02:57:01 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-10-26T02:57:04 IST" duration-ms="2727" status="PASS">
+        </test-method> <!-- submitOrderTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:sameerakhtar.tests.SubmitOrderTest@6c284af]" started-at="2024-11-05T02:07:41 IST" name="tearDown" finished-at="2024-11-05T02:07:41 IST" duration-ms="253" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:sameerakhtar.tests.SubmitOrderTest@6c284af]" started-at="2024-11-05T02:07:41 IST" name="launchApplication" finished-at="2024-11-05T02:07:44 IST" duration-ms="2783" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="orderHistoryTest(java.util.HashMap)[pri:0, instance:sameerakhtar.tests.SubmitOrderTest@6c284af]" started-at="2024-11-05T02:07:44 IST" name="orderHistoryTest" data-provider="getData" finished-at="2024-11-05T02:07:45 IST" depends-on-methods="sameerakhtar.tests.SubmitOrderTest.submitOrderTest" duration-ms="821" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Positive Test of submitting the order"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Error Validation"]]>
+                <![CDATA[{passwrod=Sameerking01!, actualItem=ZARA COAT 3, email=akhtarsameer743@gmail.com}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:sameerakhtar.cucumber.TestNGTestRunner@7bd7d6d6]" started-at="2024-10-26T02:57:04 IST" name="tearDownClass" finished-at="2024-10-26T02:57:04 IST" duration-ms="21" status="PASS">
+        </test-method> <!-- orderHistoryTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:sameerakhtar.tests.SubmitOrderTest@6c284af]" started-at="2024-11-05T02:07:45 IST" name="tearDown" finished-at="2024-11-05T02:07:45 IST" duration-ms="193" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDownClass -->
-      </class> <!-- sameerakhtar.cucumber.TestNGTestRunner -->
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:sameerakhtar.tests.SubmitOrderTest@6c284af]" started-at="2024-11-05T02:07:45 IST" name="launchApplication" finished-at="2024-11-05T02:07:47 IST" duration-ms="1885" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="orderHistoryTest(java.util.HashMap)[pri:0, instance:sameerakhtar.tests.SubmitOrderTest@6c284af]" started-at="2024-11-05T02:07:47 IST" name="orderHistoryTest" data-provider="getData" finished-at="2024-11-05T02:07:48 IST" depends-on-methods="sameerakhtar.tests.SubmitOrderTest.submitOrderTest" duration-ms="942" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{passwrod=Sameerking01!, actualItem=ADIDAS ORIGINAL, email=sameerakhtar1513@gmail.com}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- orderHistoryTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:sameerakhtar.tests.SubmitOrderTest@6c284af]" started-at="2024-11-05T02:07:48 IST" name="tearDown" finished-at="2024-11-05T02:07:48 IST" duration-ms="176" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- sameerakhtar.tests.SubmitOrderTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

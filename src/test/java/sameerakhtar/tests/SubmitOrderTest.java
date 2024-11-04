@@ -9,6 +9,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import sameerakhtar.TestComponents.BaseTest;
+import sameerakhtar.data.DataReader;
 import sameerakhtar.pageobject.CartPage;
 import sameerakhtar.pageobject.CheckoutPage;
 import sameerakhtar.pageobject.ConfirmationPage;
@@ -46,7 +47,7 @@ public class SubmitOrderTest extends BaseTest {
 
 	@DataProvider
 	public Object[][] getData() throws IOException {
-		List<HashMap<String, String>> data = getJsonDataToMap(
+		List<HashMap<String, String>> data = DataReader.getJsonDataToMap(
 				System.getProperty("user.dir") + "//src//test//java//sameerakhtar//data//PurchaseOrder.json");
 		return new Object[][] { { data.get(0) }, { data.get(1) } };
 	}
