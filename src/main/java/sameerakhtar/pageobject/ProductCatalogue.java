@@ -32,6 +32,7 @@ public class ProductCatalogue extends AbstractComponent {
 
 	public List<WebElement> getProductList() {
 		waitForElementToAppear(products);
+		waitForElementToBeClickable(products);
 		return items;
 	}
 

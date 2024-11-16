@@ -31,11 +31,15 @@ public class LandingPage extends AbstractComponent {
 
 	@FindBy(css = "[class*='flyInOut']")
 	private WebElement errorMsg;
+	
+	@FindBy(xpath = "//div[@aria-label='Login Successfully']")
+	private WebElement LoginToast;
 
 	public ProductCatalogue loginApplication(String email, String password) {
 		userEmail.sendKeys(email);
 		passwordEle.sendKeys(password);
 		submitBtn.click();
+		waitForElementToDisappear(LoginToast);
 		return new ProductCatalogue(driver);
 	}
 

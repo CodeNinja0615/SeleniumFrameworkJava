@@ -19,7 +19,7 @@ import sameerakhtar.pageobject.ProductCatalogue;
 public class SubmitOrderTest extends BaseTest {
 
 	@Test(dataProvider = "getData", groups = { "Purchase" })
-	public void submitOrderTest(HashMap<String, String> input) {
+	public void submitOrderTest(HashMap<String, String> input) throws InterruptedException {
 		ProductCatalogue productCatalogue = landingPage.loginApplication(input.get("email"), input.get("passwrod"));
 
 		productCatalogue.getProductList();

@@ -8,7 +8,7 @@
           <include name="tearDown"/>
           <include name="launchApplication"/>
           <include name="orderHistoryTest"/>
-          <include name="submitOrderTest" invocation-numbers="1"/>
+          <include name="submitOrderTest" invocation-numbers="0"/>
         </methods>
       </class> <!-- sameerakhtar.tests.SubmitOrderTest -->
     </classes>

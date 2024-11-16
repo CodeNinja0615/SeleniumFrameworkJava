@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-11-05T02:07:06 IST" name="Default suite" finished-at="2024-11-05T02:07:48 IST" duration-ms="42548">
+  <suite started-at="2024-11-16T20:39:10 IST" name="Default suite" finished-at="2024-11-16T20:40:27 IST" duration-ms="77001">
     <groups>
       <group name="Purchase">
         <method signature="SubmitOrderTest.submitOrderTest(java.util.HashMap)[pri:0, instance:sameerakhtar.tests.SubmitOrderTest@6c284af]" name="submitOrderTest" class="sameerakhtar.tests.SubmitOrderTest"/>
         <method signature="SubmitOrderTest.orderHistoryTest(java.util.HashMap)[pri:0, instance:sameerakhtar.tests.SubmitOrderTest@6c284af]" name="orderHistoryTest" class="sameerakhtar.tests.SubmitOrderTest"/>
       </group> <!-- Purchase -->
     </groups>
-    <test started-at="2024-11-05T02:07:06 IST" name="Default test" finished-at="2024-11-05T02:07:48 IST" duration-ms="42548">
+    <test started-at="2024-11-16T20:39:10 IST" name="Default test" finished-at="2024-11-16T20:40:27 IST" duration-ms="77001">
       <class name="sameerakhtar.tests.SubmitOrderTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:sameerakhtar.tests.SubmitOrderTest@6c284af]" started-at="2024-11-05T02:07:06 IST" name="launchApplication" finished-at="2024-11-05T02:07:08 IST" duration-ms="2543" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:sameerakhtar.tests.SubmitOrderTest@6c284af]" started-at="2024-11-16T20:39:10 IST" name="launchApplication" finished-at="2024-11-16T20:39:13 IST" duration-ms="2718" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="submitOrderTest(java.util.HashMap)[pri:0, instance:sameerakhtar.tests.SubmitOrderTest@6c284af]" started-at="2024-11-05T02:07:08 IST" name="submitOrderTest" data-provider="getData" finished-at="2024-11-05T02:07:23 IST" duration-ms="14708" status="PASS">
+        <test-method signature="submitOrderTest(java.util.HashMap)[pri:0, instance:sameerakhtar.tests.SubmitOrderTest@6c284af]" started-at="2024-11-16T20:39:13 IST" name="submitOrderTest" data-provider="getData" finished-at="2024-11-16T20:39:39 IST" duration-ms="26220" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -26,15 +26,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- submitOrderTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:sameerakhtar.tests.SubmitOrderTest@6c284af]" started-at="2024-11-05T02:07:23 IST" name="tearDown" finished-at="2024-11-05T02:07:23 IST" duration-ms="267" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:sameerakhtar.tests.SubmitOrderTest@6c284af]" started-at="2024-11-16T20:39:39 IST" name="tearDown" finished-at="2024-11-16T20:39:39 IST" duration-ms="230" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:sameerakhtar.tests.SubmitOrderTest@6c284af]" started-at="2024-11-05T02:07:23 IST" name="launchApplication" finished-at="2024-11-05T02:07:26 IST" duration-ms="3075" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:sameerakhtar.tests.SubmitOrderTest@6c284af]" started-at="2024-11-16T20:39:39 IST" name="launchApplication" finished-at="2024-11-16T20:39:42 IST" duration-ms="3063" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="submitOrderTest(java.util.HashMap)[pri:0, instance:sameerakhtar.tests.SubmitOrderTest@6c284af]" started-at="2024-11-05T02:07:26 IST" name="submitOrderTest" data-provider="getData" finished-at="2024-11-05T02:07:41 IST" duration-ms="14567" status="PASS">
+        <test-method signature="submitOrderTest(java.util.HashMap)[pri:0, instance:sameerakhtar.tests.SubmitOrderTest@6c284af]" started-at="2024-11-16T20:39:42 IST" name="submitOrderTest" data-provider="getData" finished-at="2024-11-16T20:40:08 IST" duration-ms="25957" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -45,15 +45,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- submitOrderTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:sameerakhtar.tests.SubmitOrderTest@6c284af]" started-at="2024-11-05T02:07:41 IST" name="tearDown" finished-at="2024-11-05T02:07:41 IST" duration-ms="253" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:sameerakhtar.tests.SubmitOrderTest@6c284af]" started-at="2024-11-16T20:40:08 IST" name="tearDown" finished-at="2024-11-16T20:40:09 IST" duration-ms="202" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:sameerakhtar.tests.SubmitOrderTest@6c284af]" started-at="2024-11-05T02:07:41 IST" name="launchApplication" finished-at="2024-11-05T02:07:44 IST" duration-ms="2783" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:sameerakhtar.tests.SubmitOrderTest@6c284af]" started-at="2024-11-16T20:40:09 IST" name="launchApplication" finished-at="2024-11-16T20:40:10 IST" duration-ms="1804" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="orderHistoryTest(java.util.HashMap)[pri:0, instance:sameerakhtar.tests.SubmitOrderTest@6c284af]" started-at="2024-11-05T02:07:44 IST" name="orderHistoryTest" data-provider="getData" finished-at="2024-11-05T02:07:45 IST" depends-on-methods="sameerakhtar.tests.SubmitOrderTest.submitOrderTest" duration-ms="821" status="PASS">
+        <test-method signature="orderHistoryTest(java.util.HashMap)[pri:0, instance:sameerakhtar.tests.SubmitOrderTest@6c284af]" started-at="2024-11-16T20:40:10 IST" name="orderHistoryTest" data-provider="getData" finished-at="2024-11-16T20:40:24 IST" depends-on-methods="sameerakhtar.tests.SubmitOrderTest.submitOrderTest" duration-ms="13397" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -64,15 +64,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- orderHistoryTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:sameerakhtar.tests.SubmitOrderTest@6c284af]" started-at="2024-11-05T02:07:45 IST" name="tearDown" finished-at="2024-11-05T02:07:45 IST" duration-ms="193" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:sameerakhtar.tests.SubmitOrderTest@6c284af]" started-at="2024-11-16T20:40:24 IST" name="tearDown" finished-at="2024-11-16T20:40:24 IST" duration-ms="231" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:sameerakhtar.tests.SubmitOrderTest@6c284af]" started-at="2024-11-05T02:07:45 IST" name="launchApplication" finished-at="2024-11-05T02:07:47 IST" duration-ms="1885" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:sameerakhtar.tests.SubmitOrderTest@6c284af]" started-at="2024-11-16T20:40:24 IST" name="launchApplication" finished-at="2024-11-16T20:40:26 IST" duration-ms="1823" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="orderHistoryTest(java.util.HashMap)[pri:0, instance:sameerakhtar.tests.SubmitOrderTest@6c284af]" started-at="2024-11-05T02:07:47 IST" name="orderHistoryTest" data-provider="getData" finished-at="2024-11-05T02:07:48 IST" depends-on-methods="sameerakhtar.tests.SubmitOrderTest.submitOrderTest" duration-ms="942" status="PASS">
+        <test-method signature="orderHistoryTest(java.util.HashMap)[pri:0, instance:sameerakhtar.tests.SubmitOrderTest@6c284af]" started-at="2024-11-16T20:40:26 IST" name="orderHistoryTest" data-provider="getData" finished-at="2024-11-16T20:40:27 IST" depends-on-methods="sameerakhtar.tests.SubmitOrderTest.submitOrderTest" duration-ms="860" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -83,7 +83,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- orderHistoryTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:sameerakhtar.tests.SubmitOrderTest@6c284af]" started-at="2024-11-05T02:07:48 IST" name="tearDown" finished-at="2024-11-05T02:07:48 IST" duration-ms="176" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:sameerakhtar.tests.SubmitOrderTest@6c284af]" started-at="2024-11-16T20:40:27 IST" name="tearDown" finished-at="2024-11-16T20:40:27 IST" duration-ms="178" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

@@ -90,7 +90,7 @@ public class BaseTest {
 		driver = initializeDriver();
 		landingPage = new LandingPage(driver);
 		landingPage.goTo();
-		return landingPage;
+		return landingPage; //---Using this in stepDefinition in cucumber
 	}
 
 	@AfterMethod(alwaysRun = true)

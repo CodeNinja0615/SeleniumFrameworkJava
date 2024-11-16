@@ -26,27 +26,45 @@ public class AbstractComponent {
 	@FindBy(css = "button[routerlink*='myorders']")
 	private WebElement orderHeader;
 
+	public void waitForElementToAppear(WebElement Element) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait.until(ExpectedConditions.visibilityOf(Element));
+	}
+	
 	public void waitForElementToAppear(By by) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(by));
 	}
 
-	public void waitForElementToAppear(WebElement Element) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-		wait.until(ExpectedConditions.visibilityOf(Element));
-	}
 
+	public void waitForElementToBeClickable(WebElement Element) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait.until(ExpectedConditions.elementToBeClickable(Element));
+	}
+	
+	public void waitForElementToBeClickable(By by) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait.until(ExpectedConditions.elementToBeClickable(by));
+	}
+	
 	public void waitForElementToDisappear(WebElement element) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		wait.until(ExpectedConditions.invisibilityOf(element));
 	}
+	
+	public void waitForElementToDisappear(By by) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(by));
+	}
 
 	public CartPage goToCartPage() {
+		waitForElementToBeClickable(cartHeader);
 		cartHeader.click();
 		return new CartPage(driver);
 	}
 
 	public OrdersPage goToOrdersPage() {
+		waitForElementToBeClickable(orderHeader);
 		orderHeader.click();
 		return new OrdersPage(driver);
 	}
