@@ -20,7 +20,9 @@ public class AbstractComponent {
 		this.driver = driver;
 	}
 
-	@FindBy(css = "button[routerlink*='cart']")
+//	@FindBy(css = "button[routerlink*='cart']")
+//	private WebElement cartHeader;
+	@FindBy(xpath = "//button[contains(@routerlink, 'cart')]")
 	private WebElement cartHeader;
 
 	@FindBy(css = "button[routerlink*='myorders']")

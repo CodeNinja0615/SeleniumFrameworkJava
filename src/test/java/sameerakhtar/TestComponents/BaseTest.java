@@ -31,7 +31,7 @@ public class BaseTest {
 	public WebDriver driver;
 	public LandingPage landingPage;
 
-	public WebDriver initializeDriver() throws IOException {
+	public void initializeDriver() throws IOException {
 		Properties prop = new Properties();
 		FileInputStream fis = new FileInputStream(
 				System.getProperty("user.dir") + "//src//main//java//sameerakhtar//resources//GlobalData.properties");
@@ -62,7 +62,6 @@ public class BaseTest {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
-		return driver;
 	}
 
 //	public List<HashMap<String, String>> getJsonDataToMap(String filePath) throws IOException {
@@ -87,7 +86,7 @@ public class BaseTest {
 
 	@BeforeMethod(alwaysRun = true)
 	public LandingPage launchApplication() throws IOException {
-		driver = initializeDriver();
+		initializeDriver();
 		landingPage = new LandingPage(driver);
 		landingPage.goTo();
 		return landingPage; //---Using this in stepDefinition in cucumber

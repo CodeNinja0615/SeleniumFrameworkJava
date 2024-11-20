@@ -5,12 +5,17 @@
     <listener class-name="sameerakhtar.TestComponents.Listeners"/>
   </listeners>
   <test thread-count="5" parallel="tests" name="Submit Order(failed)">
+    <groups>
+      <run>
+        <include name="Purchase"/>
+      </run>
+    </groups>
     <classes>
       <class name="sameerakhtar.tests.SubmitOrderTest">
         <methods>
           <include name="tearDown"/>
           <include name="launchApplication"/>
-          <include name="submitOrderTest" invocation-numbers="1"/>
+          <include name="submitOrderTest" invocation-numbers="0 1"/>
           <include name="orderHistoryTest"/>
         </methods>
       </class> <!-- sameerakhtar.tests.SubmitOrderTest -->
