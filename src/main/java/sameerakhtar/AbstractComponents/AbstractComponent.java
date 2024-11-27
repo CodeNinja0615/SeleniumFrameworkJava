@@ -1,5 +1,8 @@
 package sameerakhtar.AbstractComponents;
 
+import java.awt.Toolkit;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.StringSelection;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
@@ -28,6 +31,13 @@ public class AbstractComponent {
 	@FindBy(css = "button[routerlink*='myorders']")
 	private WebElement orderHeader;
 
+	
+	public void copyToClipboard(String text) {
+	    StringSelection stringSelection = new StringSelection(text); // Wrap the text
+	    Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard(); // Get the system clipboard
+	    clipboard.setContents(stringSelection, null); // Set the clipboard content
+	}
+	
 	public void waitForElementToAppear(WebElement Element) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		wait.until(ExpectedConditions.visibilityOf(Element));
