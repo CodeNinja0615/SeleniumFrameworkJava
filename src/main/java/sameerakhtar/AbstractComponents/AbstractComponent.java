@@ -1,8 +1,11 @@
 package sameerakhtar.AbstractComponents;
 
+import java.awt.AWTException;
+import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
@@ -36,6 +39,14 @@ public class AbstractComponent {
 	    StringSelection stringSelection = new StringSelection(text); // Wrap the text
 	    Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard(); // Get the system clipboard
 	    clipboard.setContents(stringSelection, null); // Set the clipboard content
+	}
+	
+	public void pasteClipboardText() throws AWTException {
+		Robot action = new Robot();
+		action.keyPress(KeyEvent.CTRL_DOWN_MASK);
+		action.keyPress(KeyEvent.VK_V);
+		action.keyRelease(KeyEvent.VK_V);
+		action.keyRelease(KeyEvent.CTRL_DOWN_MASK);
 	}
 	
 	public void waitForElementToAppear(WebElement Element) {
