@@ -15,12 +15,13 @@ public class ErrorValidationsTest extends BaseTest {
 	@Test(groups = {"ErrorHandling"}, retryAnalyzer=Retry.class)
 	public void loginErrorValidation() throws IOException {
 		landingPage.loginApplication("akhtarsameer743@gmail.com", "Sameerking01");
-		Assert.assertEquals("Incorrect email or password.", landingPage.getErrorMessgae());
+		String error = landingPage.getErrorMessgae();
+		Assert.assertEquals("Incorrect email or password.", error);
 	}
 
 	@Test(groups = {"ErrorHandling"})
 	public void errorProductValidation() throws IOException {
-		String actualItem = "ZARA COAT 3";
+		String actualItem = "IPHONE 13 PRO";
 		ProductCatalogue productCatalogue = landingPage.loginApplication("sameerakhtar1513@gmail.com", "Sameerking01!");
 
 		productCatalogue.getProductList();

@@ -5,20 +5,26 @@
     <listener class-name="sameerakhtar.TestComponents.Listeners"/>
   </listeners>
   <test thread-count="5" parallel="tests" name="Submit Order(failed)">
-    <groups>
-      <run>
-        <include name="Purchase"/>
-      </run>
-    </groups>
     <classes>
       <class name="sameerakhtar.tests.SubmitOrderTest">
         <methods>
           <include name="tearDown"/>
           <include name="launchApplication"/>
-          <include name="submitOrderTest" invocation-numbers="0 1"/>
-          <include name="orderHistoryTest"/>
+          <include name="submitOrderTest"/>
+          <include name="orderHistoryTest" invocation-numbers="1"/>
         </methods>
       </class> <!-- sameerakhtar.tests.SubmitOrderTest -->
     </classes>
   </test> <!-- Submit Order(failed) -->
+  <test thread-count="5" parallel="tests" name="Error Validation(failed)">
+    <classes>
+      <class name="sameerakhtar.tests.ErrorValidationsTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="loginErrorValidation"/>
+          <include name="launchApplication"/>
+        </methods>
+      </class> <!-- sameerakhtar.tests.ErrorValidationsTest -->
+    </classes>
+  </test> <!-- Error Validation(failed) -->
 </suite> <!-- Failed suite [Suite] -->

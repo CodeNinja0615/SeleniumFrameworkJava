@@ -20,7 +20,7 @@ public class SubmitOrderTest extends BaseTest {
 
 	@Test(dataProvider = "getData", groups = { "Purchase" })
 	public void submitOrderTest(HashMap<String, String> input) throws InterruptedException {
-		ProductCatalogue productCatalogue = landingPage.loginApplication(input.get("email"), input.get("passwrod"));
+		ProductCatalogue productCatalogue = landingPage.loginApplication(input.get("email"), input.get("password"));
 
 		productCatalogue.getProductList();
 		productCatalogue.getProductByName(input.get("actualItem"));
@@ -39,7 +39,7 @@ public class SubmitOrderTest extends BaseTest {
 
 	@Test(dependsOnMethods = { "submitOrderTest" }, dataProvider = "getData", groups = { "Purchase" })
 	public void orderHistoryTest(HashMap<String, String> input) {
-		ProductCatalogue productCatalogue = landingPage.loginApplication(input.get("email"), input.get("passwrod"));
+		ProductCatalogue productCatalogue = landingPage.loginApplication(input.get("email"), input.get("password"));
 		OrdersPage ordersPage = productCatalogue.goToOrdersPage();
 		Boolean orderStatus = ordersPage.verifyOrder(input.get("actualItem"));
 		Assert.assertTrue(orderStatus);
@@ -49,7 +49,7 @@ public class SubmitOrderTest extends BaseTest {
 	public Object[][] getData() throws IOException {
 		List<HashMap<String, String>> data = DataReader.getJsonDataToMap(
 				System.getProperty("user.dir") + "//src//test//java//sameerakhtar//data//PurchaseOrder.json");
-		return new Object[][] { { data.get(0) }, { data.get(1) } };
+		return new Object[][] { { data.get(0) }, { data.get(1) } }; //--Set of parameters
 	}
 
 //	@DataProvider
