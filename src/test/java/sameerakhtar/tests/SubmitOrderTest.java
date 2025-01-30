@@ -23,7 +23,7 @@ public class SubmitOrderTest extends BaseTest {
 		ProductCatalogue productCatalogue = landingPage.loginApplication(input.get("email"), input.get("password"));
 
 		productCatalogue.getProductList();
-		productCatalogue.getProductByName(input.get("actualItem"));
+//		productCatalogue.getProductByName(input.get("actualItem"));
 		productCatalogue.addProductToCart(input.get("actualItem"));
 		CartPage cartPage = productCatalogue.goToCartPage();
 
@@ -49,7 +49,7 @@ public class SubmitOrderTest extends BaseTest {
 	public Object[][] getData() throws IOException {
 		List<HashMap<String, String>> data = DataReader.getJsonDataToMap(
 				System.getProperty("user.dir") + "//src//test//java//sameerakhtar//data//PurchaseOrder.json");
-		return new Object[][] { { data.get(0) }, { data.get(1) } }; //--Set of parameters
+		return new Object[][] { { data.get(0) }, { data.get(1) } };// data.get(0) -- first set of parameters // data.get(1) -- second set of parameters
 	}
 
 //	@DataProvider

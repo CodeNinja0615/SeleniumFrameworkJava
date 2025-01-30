@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="sameerakhtar.tests.ErrorValidationsTest">
+      <class name="sameerakhtar.tests.SubmitOrderTest">
         <methods>
           <include name="tearDown"/>
-          <include name="loginErrorValidation"/>
           <include name="launchApplication"/>
+          <include name="submitOrderTest" invocation-numbers="1"/>
+          <include name="orderHistoryTest"/>
         </methods>
-      </class> <!-- sameerakhtar.tests.ErrorValidationsTest -->
+      </class> <!-- sameerakhtar.tests.SubmitOrderTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

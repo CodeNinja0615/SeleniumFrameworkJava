@@ -23,6 +23,6 @@ public class OrdersPage extends AbstractComponent {
 	List<WebElement> orderedItems;
 	
 	public boolean verifyOrder(String actualName) {
-		return orderedItems.stream().anyMatch(order-> order.getText().equals(actualName));
+		return orderedItems.stream().anyMatch(order-> order.getText().equalsIgnoreCase(actualName));
 	}
 }
