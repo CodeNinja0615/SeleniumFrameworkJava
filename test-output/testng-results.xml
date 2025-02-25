@@ -1,43 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-02-26T03:27:14 IST" name="Suite" finished-at="2025-02-26T03:27:34 IST" duration-ms="19565">
+  <suite started-at="2025-02-26T03:48:50 IST" name="Suite" finished-at="2025-02-26T03:49:30 IST" duration-ms="39631">
     <groups>
       <group name="ErrorHandling">
-        <method signature="ErrorValidationsTest.errorProductValidation()[pri:0, instance:sameerakhtar.tests.ErrorValidationsTest@37c7595]" name="errorProductValidation" class="sameerakhtar.tests.ErrorValidationsTest"/>
-        <method signature="ErrorValidationsTest.loginErrorValidation()[pri:0, instance:sameerakhtar.tests.ErrorValidationsTest@37c7595]" name="loginErrorValidation" class="sameerakhtar.tests.ErrorValidationsTest"/>
+        <method signature="ErrorValidationsTest.errorProductValidation()[pri:0, instance:sameerakhtar.tests.ErrorValidationsTest@906d29b]" name="errorProductValidation" class="sameerakhtar.tests.ErrorValidationsTest"/>
+        <method signature="ErrorValidationsTest.loginErrorValidation()[pri:0, instance:sameerakhtar.tests.ErrorValidationsTest@906d29b]" name="loginErrorValidation" class="sameerakhtar.tests.ErrorValidationsTest"/>
       </group> <!-- ErrorHandling -->
+      <group name="Purchase">
+        <method signature="SubmitOrderTest.submitOrderTest(java.util.HashMap)[pri:0, instance:sameerakhtar.tests.SubmitOrderTest@5a709816]" name="submitOrderTest" class="sameerakhtar.tests.SubmitOrderTest"/>
+        <method signature="SubmitOrderTest.orderHistoryTest(java.util.HashMap)[pri:0, instance:sameerakhtar.tests.SubmitOrderTest@5a709816]" name="orderHistoryTest" class="sameerakhtar.tests.SubmitOrderTest"/>
+      </group> <!-- Purchase -->
     </groups>
-    <test started-at="2025-02-26T03:27:14 IST" name="Submit Order" finished-at="2025-02-26T03:27:14 IST" duration-ms="11">
-    </test> <!-- Submit Order -->
-    <test started-at="2025-02-26T03:27:14 IST" name="Error Validation" finished-at="2025-02-26T03:27:34 IST" duration-ms="19564">
+    <test started-at="2025-02-26T03:48:50 IST" name="Error Validation" finished-at="2025-02-26T03:49:11 IST" duration-ms="20892">
       <class name="sameerakhtar.tests.ErrorValidationsTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:sameerakhtar.tests.ErrorValidationsTest@37c7595]" started-at="2025-02-26T03:27:14 IST" name="launchApplication" finished-at="2025-02-26T03:27:17 IST" duration-ms="2491" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:sameerakhtar.tests.ErrorValidationsTest@906d29b]" started-at="2025-02-26T03:48:50 IST" name="launchApplication" finished-at="2025-02-26T03:48:53 IST" duration-ms="2397" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="errorProductValidation()[pri:0, instance:sameerakhtar.tests.ErrorValidationsTest@37c7595]" started-at="2025-02-26T03:27:17 IST" name="errorProductValidation" finished-at="2025-02-26T03:27:30 IST" duration-ms="13800" status="PASS">
+        <test-method signature="errorProductValidation()[pri:0, instance:sameerakhtar.tests.ErrorValidationsTest@906d29b]" started-at="2025-02-26T03:48:53 IST" name="errorProductValidation" finished-at="2025-02-26T03:49:07 IST" duration-ms="13940" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- errorProductValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:sameerakhtar.tests.ErrorValidationsTest@37c7595]" started-at="2025-02-26T03:27:30 IST" name="tearDown" finished-at="2025-02-26T03:27:31 IST" duration-ms="230" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:sameerakhtar.tests.ErrorValidationsTest@906d29b]" started-at="2025-02-26T03:49:07 IST" name="tearDown" finished-at="2025-02-26T03:49:07 IST" duration-ms="211" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:sameerakhtar.tests.ErrorValidationsTest@37c7595]" started-at="2025-02-26T03:27:31 IST" name="launchApplication" finished-at="2025-02-26T03:27:32 IST" duration-ms="1748" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:sameerakhtar.tests.ErrorValidationsTest@906d29b]" started-at="2025-02-26T03:49:07 IST" name="launchApplication" finished-at="2025-02-26T03:49:10 IST" duration-ms="3134" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="loginErrorValidation()[pri:0, instance:sameerakhtar.tests.ErrorValidationsTest@37c7595]" started-at="2025-02-26T03:27:32 IST" name="loginErrorValidation" finished-at="2025-02-26T03:27:33 IST" duration-ms="1029" status="PASS">
+        <test-method signature="loginErrorValidation()[pri:0, instance:sameerakhtar.tests.ErrorValidationsTest@906d29b]" started-at="2025-02-26T03:49:10 IST" name="loginErrorValidation" finished-at="2025-02-26T03:49:11 IST" duration-ms="1010" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginErrorValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:sameerakhtar.tests.ErrorValidationsTest@37c7595]" started-at="2025-02-26T03:27:33 IST" name="tearDown" finished-at="2025-02-26T03:27:34 IST" duration-ms="217" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:sameerakhtar.tests.ErrorValidationsTest@906d29b]" started-at="2025-02-26T03:49:11 IST" name="tearDown" finished-at="2025-02-26T03:49:11 IST" duration-ms="154" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- sameerakhtar.tests.ErrorValidationsTest -->
     </test> <!-- Error Validation -->
+    <test started-at="2025-02-26T03:48:50 IST" name="Submit Order" finished-at="2025-02-26T03:49:30 IST" duration-ms="39631">
+      <class name="sameerakhtar.tests.SubmitOrderTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:sameerakhtar.tests.SubmitOrderTest@5a709816]" started-at="2025-02-26T03:48:51 IST" name="launchApplication" finished-at="2025-02-26T03:48:53 IST" duration-ms="2330" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="submitOrderTest(java.util.HashMap)[pri:0, instance:sameerakhtar.tests.SubmitOrderTest@5a709816]" started-at="2025-02-26T03:48:53 IST" name="submitOrderTest" data-provider="getData" finished-at="2025-02-26T03:49:07 IST" duration-ms="14515" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=Sameerking01!, actualItem=IPHONE 13 PRO, email=akhtarsameer743@gmail.com}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- submitOrderTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:sameerakhtar.tests.SubmitOrderTest@5a709816]" started-at="2025-02-26T03:49:07 IST" name="tearDown" finished-at="2025-02-26T03:49:08 IST" duration-ms="247" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:sameerakhtar.tests.SubmitOrderTest@5a709816]" started-at="2025-02-26T03:49:08 IST" name="launchApplication" finished-at="2025-02-26T03:49:10 IST" duration-ms="2221" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="submitOrderTest(java.util.HashMap)[pri:0, instance:sameerakhtar.tests.SubmitOrderTest@5a709816]" started-at="2025-02-26T03:49:10 IST" name="submitOrderTest" data-provider="getData" finished-at="2025-02-26T03:49:24 IST" duration-ms="14293" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=Sameerking01!, actualItem=ZARA COAT 3, email=sameerakhtar1513@gmail.com}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- submitOrderTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:sameerakhtar.tests.SubmitOrderTest@5a709816]" started-at="2025-02-26T03:49:24 IST" name="tearDown" finished-at="2025-02-26T03:49:24 IST" duration-ms="178" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:sameerakhtar.tests.SubmitOrderTest@5a709816]" started-at="2025-02-26T03:49:24 IST" name="launchApplication" finished-at="2025-02-26T03:49:26 IST" duration-ms="1697" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="orderHistoryTest(java.util.HashMap)[pri:0, instance:sameerakhtar.tests.SubmitOrderTest@5a709816]" started-at="2025-02-26T03:49:26 IST" name="orderHistoryTest" data-provider="getData" finished-at="2025-02-26T03:49:27 IST" depends-on-methods="sameerakhtar.tests.SubmitOrderTest.submitOrderTest" duration-ms="663" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=Sameerking01!, actualItem=IPHONE 13 PRO, email=akhtarsameer743@gmail.com}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- orderHistoryTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:sameerakhtar.tests.SubmitOrderTest@5a709816]" started-at="2025-02-26T03:49:27 IST" name="tearDown" finished-at="2025-02-26T03:49:27 IST" duration-ms="164" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:sameerakhtar.tests.SubmitOrderTest@5a709816]" started-at="2025-02-26T03:49:27 IST" name="launchApplication" finished-at="2025-02-26T03:49:29 IST" duration-ms="1844" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="orderHistoryTest(java.util.HashMap)[pri:0, instance:sameerakhtar.tests.SubmitOrderTest@5a709816]" started-at="2025-02-26T03:49:29 IST" name="orderHistoryTest" data-provider="getData" finished-at="2025-02-26T03:49:30 IST" depends-on-methods="sameerakhtar.tests.SubmitOrderTest.submitOrderTest" duration-ms="1068" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=Sameerking01!, actualItem=ZARA COAT 3, email=sameerakhtar1513@gmail.com}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- orderHistoryTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:sameerakhtar.tests.SubmitOrderTest@5a709816]" started-at="2025-02-26T03:49:30 IST" name="tearDown" finished-at="2025-02-26T03:49:30 IST" duration-ms="167" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- sameerakhtar.tests.SubmitOrderTest -->
+    </test> <!-- Submit Order -->
   </suite> <!-- Suite -->
 </testng-results>

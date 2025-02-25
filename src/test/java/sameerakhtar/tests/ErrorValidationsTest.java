@@ -29,7 +29,7 @@ public class ErrorValidationsTest extends BaseTest {
 		productCatalogue.addProductToCart(actualItem);
 		CartPage cartPage = productCatalogue.goToCartPage();
 
-		Boolean status = cartPage.verifyProductAdded("ZARA COAT 33");
+		Boolean status = cartPage.verifyProductAdded("IPHONE 13 PRO ");
 		Assert.assertFalse(status);
 	}
 }

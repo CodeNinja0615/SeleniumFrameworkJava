@@ -30,13 +30,12 @@ public class BaseTest {
 
 	public WebDriver driver;
 	public LandingPage landingPage;
-	ThreadLocal<WebDriver> threadDriver = new ThreadLocal<WebDriver>();
 	public void initializeDriver() throws IOException {
 		Properties prop = new Properties();
 		FileInputStream fis = new FileInputStream(
 				System.getProperty("user.dir") + "//src//main//java//sameerakhtar//resources//GlobalData.properties");
 		prop.load(fis);
-		String browserName = System.getProperty("browser") != null ? System.getProperty("browser")
+		String browserName = System.getProperty("browser") != null ? System.getProperty("browser") //--Ternary operators
 				: prop.getProperty("browser");
 //		prop.getProperty("browser");
 		if (browserName.contains("chrome")) {
@@ -61,26 +60,11 @@ public class BaseTest {
 //		driver.manage().window().setSize(new Dimension(1920, 1080)); //----To run in full screen
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		threadDriver.set(driver);
 	}
-
-	public WebDriver getDriver() {
-		return threadDriver.get();
-	}
-//	public List<HashMap<String, String>> getJsonDataToMap(String filePath) throws IOException {
-//		// Read JSON to String
-//		String jsonContent = FileUtils.readFileToString(new File(filePath), StandardCharsets.UTF_8);
-//		// String to HashMap using Jackson
-//		ObjectMapper mapper = new ObjectMapper();
-//		List<HashMap<String, String>> data = mapper.readValue(jsonContent,
-//				new TypeReference<List<HashMap<String, String>>>() {
-//				});
-//		return data;
-//	}
 
 	public String getScreenshot(String testCaseName, WebDriver driver) throws IOException {// ----Goes to extent report
 																							// in Listeners
-		TakesScreenshot ts = (TakesScreenshot) getDriver();
+		TakesScreenshot ts = (TakesScreenshot) driver;
 		File src = ts.getScreenshotAs(OutputType.FILE);
 		File filePath = new File(System.getProperty("user.dir") + "//reports//" + testCaseName + ".png");
 		FileUtils.copyFile(src, filePath);
@@ -90,14 +74,13 @@ public class BaseTest {
 	@BeforeMethod(alwaysRun = true)
 	public LandingPage launchApplication() throws IOException {
 		initializeDriver();
-		landingPage = new LandingPage(getDriver());
+		landingPage = new LandingPage(driver);
 		landingPage.goTo();
 		return landingPage; //---Using this in stepDefinition in cucumber
 	}
 
 	@AfterMethod(alwaysRun = true)
 	public void tearDown() {
-		getDriver().quit();
-//		driver.quit();
+		driver.quit();
 	}
 }
