@@ -18,6 +18,7 @@
 	<test thread-count="5" name="Error Validation">
 		<classes>
 			<class name="sameerakhtar.tests.ErrorValidationsTest" />
+			<!--<class name="sameerakhtar.tests.RandomTest" />-->
 		</classes>
 	</test> <!--
 	Test -->

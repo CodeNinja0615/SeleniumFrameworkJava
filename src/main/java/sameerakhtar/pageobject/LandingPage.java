@@ -39,7 +39,7 @@ public class LandingPage extends AbstractComponent {
 		userEmail.sendKeys(email);
 		passwordEle.sendKeys(password);
 		submitBtn.click();
-		waitForElementToDisappear(LoginToast);
+//		waitForElementToDisappear(LoginToast);
 		return new ProductCatalogue(driver);
 	}
 

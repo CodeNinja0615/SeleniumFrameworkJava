@@ -30,7 +30,7 @@ public class BaseTest {
 
 	public WebDriver driver;
 	public LandingPage landingPage;
-
+	ThreadLocal<WebDriver> threadDriver = new ThreadLocal<WebDriver>();
 	public void initializeDriver() throws IOException {
 		Properties prop = new Properties();
 		FileInputStream fis = new FileInputStream(
@@ -61,9 +61,12 @@ public class BaseTest {
 //		driver.manage().window().setSize(new Dimension(1920, 1080)); //----To run in full screen
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
+		threadDriver.set(driver);
 	}
 
+	public WebDriver getDriver() {
+		return threadDriver.get();
+	}
 //	public List<HashMap<String, String>> getJsonDataToMap(String filePath) throws IOException {
 //		// Read JSON to String
 //		String jsonContent = FileUtils.readFileToString(new File(filePath), StandardCharsets.UTF_8);
@@ -77,7 +80,7 @@ public class BaseTest {
 
 	public String getScreenshot(String testCaseName, WebDriver driver) throws IOException {// ----Goes to extent report
 																							// in Listeners
-		TakesScreenshot ts = (TakesScreenshot) driver;
+		TakesScreenshot ts = (TakesScreenshot) getDriver();
 		File src = ts.getScreenshotAs(OutputType.FILE);
 		File filePath = new File(System.getProperty("user.dir") + "//reports//" + testCaseName + ".png");
 		FileUtils.copyFile(src, filePath);
@@ -87,13 +90,14 @@ public class BaseTest {
 	@BeforeMethod(alwaysRun = true)
 	public LandingPage launchApplication() throws IOException {
 		initializeDriver();
-		landingPage = new LandingPage(driver);
+		landingPage = new LandingPage(getDriver());
 		landingPage.goTo();
 		return landingPage; //---Using this in stepDefinition in cucumber
 	}
 
 	@AfterMethod(alwaysRun = true)
 	public void tearDown() {
-		driver.quit();
+		getDriver().quit();
+//		driver.quit();
 	}
 }
