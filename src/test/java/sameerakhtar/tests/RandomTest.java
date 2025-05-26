@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 
 import sameerakhtar.TestComponents.BaseTest;
 import sameerakhtar.pageobject.CartPage;
+import sameerakhtar.pageobject.LandingPage;
 import sameerakhtar.pageobject.ProductCatalogue;
 
 public class RandomTest extends BaseTest {
@@ -14,6 +15,8 @@ public class RandomTest extends BaseTest {
 	@Test(groups = {"ErrorHandling"})
 	public void errorProductValidation() throws IOException {
 		String actualItem = "IPHONE 13 PRO";
+		LandingPage landingPage = new LandingPage(getDriver());
+		landingPage.goTo();
 		ProductCatalogue productCatalogue = landingPage.loginApplication("sameerakhtar1513@gmail.com", "Sameerking01!");
 
 		productCatalogue.getProductList();

@@ -13,6 +13,7 @@ import sameerakhtar.data.DataReader;
 import sameerakhtar.pageobject.CartPage;
 import sameerakhtar.pageobject.CheckoutPage;
 import sameerakhtar.pageobject.ConfirmationPage;
+import sameerakhtar.pageobject.LandingPage;
 import sameerakhtar.pageobject.OrdersPage;
 import sameerakhtar.pageobject.ProductCatalogue;
 
@@ -20,6 +21,8 @@ public class SubmitOrderTest extends BaseTest {
 
 	@Test(dataProvider = "getData", groups = { "Purchase" })
 	public void submitOrderTest(HashMap<String, String> input) throws InterruptedException {
+		LandingPage landingPage = new LandingPage(getDriver());
+		landingPage.goTo();
 		ProductCatalogue productCatalogue = landingPage.loginApplication(input.get("email"), input.get("password"));
 
 		productCatalogue.getProductList();
@@ -39,6 +42,8 @@ public class SubmitOrderTest extends BaseTest {
 
 	@Test(dependsOnMethods = { "submitOrderTest" }, dataProvider = "getData", groups = { "Purchase" })
 	public void orderHistoryTest(HashMap<String, String> input) {
+		LandingPage landingPage = new LandingPage(getDriver());
+		landingPage.goTo();
 		ProductCatalogue productCatalogue = landingPage.loginApplication(input.get("email"), input.get("password"));
 		OrdersPage ordersPage = productCatalogue.goToOrdersPage();
 		Boolean orderStatus = ordersPage.verifyOrder(input.get("actualItem"));

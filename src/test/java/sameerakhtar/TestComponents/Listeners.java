@@ -1,6 +1,7 @@
 package sameerakhtar.TestComponents;
 
 import java.io.IOException;
+import java.lang.reflect.Method;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
@@ -41,21 +42,49 @@ public class Listeners extends BaseTest implements ITestListener {
 		ITestListener.super.onTestFailure(result);
 		extentTest.get().fail(result.getThrowable());
 
+		//----Parallel (exclude method)
+//		try {
+//			driver = (WebDriver) result.getTestClass().getRealClass().getField("driver").get(result.getInstance());
+//		} catch (Exception e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		// ScreenShot, Attach it to the report
+//		String path = null;
+//		try {
+//			path = getScreenshot(result.getMethod().getMethodName(), driver);
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		extentTest.get().addScreenCaptureFromPath(path, result.getMethod().getMethodName());
+		
+		//--Parallel (include method)
 		try {
-			driver = (WebDriver) result.getTestClass().getRealClass().getField("driver").get(result.getInstance());
+			// Use reflection to call getDriver() method instead of accessing driver field
+			Method m = result.getInstance().getClass().getMethod("getDriver");
+			driver = (WebDriver) m.invoke(result.getInstance());
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		// ScreenShot, Attach it to the report
 		String path = null;
-		try {
-			path = getScreenshot(result.getMethod().getMethodName(), driver);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		if (driver != null) {
+			try {
+				path = getScreenshot(result.getMethod().getMethodName(), driver);
+				if (path != null) {
+					// Convert absolute path to relative path for ExtentReports
+//					String baseDir = System.getProperty("user.dir"); //--for IntelliJ
+//					String relPath = path.replace(baseDir + "/", "");
+					extentTest.get().addScreenCaptureFromPath(path, result.getMethod().getMethodName());
+				}
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		} else {
+			System.out.println("[Listener] WebDriver is null, screenshot not captured for: " + result.getMethod().getMethodName());
 		}
-		extentTest.get().addScreenCaptureFromPath(path, result.getMethod().getMethodName());
+		
 	}
 
 	@Override

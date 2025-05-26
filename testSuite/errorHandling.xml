@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite" parallel="tests">
+<suite name="Suite" parallel="methods">
 	<groups>
 		<run>
 			<include name="ErrorHandling"></include>
@@ -9,12 +9,12 @@
 	<listeners>
 		<listener class-name="sameerakhtar.TestComponents.Listeners"></listener>
 	</listeners>
-	<test thread-count="5" name="Submit Order">
+	<!--<test thread-count="5" name="Submit Order">
 		<classes>
 			<class name="sameerakhtar.tests.SubmitOrderTest" />
 		</classes>
-	</test> <!--
-	Test -->
+	</test> -->
+	<!--Test -->
 	<test thread-count="5" name="Error Validation">
 		<classes>
 			<class name="sameerakhtar.tests.ErrorValidationsTest" />
